@@ -3871,3 +3871,24 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 4161)
 
 
+Started GET "/users/sign_up" for ::1 at 2024-08-23 16:04:47 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 72)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 929)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 3415)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 4128)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-08-23 16:04:50 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 119)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 912)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 3392)
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 4137)
+
+
