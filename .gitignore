@@ -1,0 +1,11 @@
+# Ignore environment variables
+*.env
+!.env.example
+*.dockerignore
+
+
+
+#ignore database configuration
+db/postgres
+/config/database.yml
+

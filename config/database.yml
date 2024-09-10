@@ -1,0 +1,23 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  url: <%= ENV['DATABASE_URL'] %>
+  port: 5432
+
+development:
+  <<: *default
+  database: todo_development
+
+test:
+  <<: *default
+  database: todo_test
+  username: todo
+  password: '<%= ENV.fetch("POSTGRES_PASSWORD","todopassword") %>'
+  host:  '<%= ENV.fetch("POSTGRES_HOST","localhost") %>'
+
+production:
+  <<: *default
+  database: todo_production
+  username: todo
+  password: <%= ENV['TODO_DATABASE_PASSWORD'] %>
