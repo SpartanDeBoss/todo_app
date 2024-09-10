@@ -1,7 +1,7 @@
 # Ignore environment variables
 *.env
 !.env.example
-.dockerignore
+*.dockerignore
 
 
 
