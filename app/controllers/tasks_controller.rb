@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-  before_action :set_task, only: [:show, :edit, :update, :destroy, :create]
+  before_action :set_task, only: [:show, :edit, :update, :destroy]
 
   def index
     @tasks = Task.all
@@ -29,7 +29,7 @@ class TasksController < ApplicationController
 
   def update
     if @task.update(task_params)
-      redirect_to @task, notice: "Task has been updated successfully"
+      redirect_to @task, notice: "Task was successfully updated"
     else
       render :edit
     end
@@ -37,7 +37,7 @@ class TasksController < ApplicationController
 
   def destroy
     @task.destroy
-    redirect_to tasks_path, notice: "Task has been deleted"
+    redirect_to tasks_url, notice: "Task was successfully destroyed"
   end
 
   private
@@ -47,6 +47,6 @@ class TasksController < ApplicationController
   end
 
   def task_params
-    params.require(:task).permit(:title, :description, :due_date, :status, :user_id)
+    params.require(:task).permit(:title, :description, :due_date, :status)
   end
 end

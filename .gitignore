@@ -1,0 +1,10 @@
+# Ignore environment variables
+*.env
+!.env.example
+
+
+
+#ignore database configuration
+db/postgres
+/config/database.yml
+
